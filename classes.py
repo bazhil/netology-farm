@@ -22,7 +22,27 @@ class Animal():
     def say(self):
         pass
 
-class Cow(Animal):
+class Mammal(Animal):
+    legs = 4
+
+    def get_name(self):
+        pass
+
+    def say(self):
+        pass
+
+
+class Bird(Animal):
+    legs = 2
+    wings = 2
+
+    def get_name(self):
+        pass
+
+    def say(self):
+        pass
+
+class Cow(Mammal):
 
     def __init__(self, name):
         self.name = name
@@ -41,7 +61,7 @@ Cow_1 = Cow('Vera')
 Cow_2 = Cow('Lena')
 Cow_3 = Cow('Vova')
 
-class Goat(Animal):
+class Goat(Mammal):
 
     def __init__(self, name):
         self.name = name
@@ -63,7 +83,7 @@ Goat_1 = Goat('Vasya')
 Goat_2 = Goat('Zorya')
 Goat_3 = Goat('Mila')
 
-class Sheep(Animal):
+class Sheep(Mammal):
 
     def __init__(self, name):
         self.name = name
@@ -80,7 +100,7 @@ class Sheep(Animal):
 
 Sheep_1 = Sheep('Fedya')
 
-class Pig(Animal):
+class Pig(Mammal):
 
     def __init__(self, name):
         self.name = name
@@ -100,13 +120,14 @@ class Pig(Animal):
 
 Pig_1 = Pig('Hryak')
 
-class Chiken(Animal):
+class Chiken(Bird):
 
     def __init__(self):
         self.minweight=1
         self.maxweight=5
         self.product=['meat', 'eggs']
         self.scream='ko'
+
 
     def eat(self):
         return food/8
@@ -119,7 +140,7 @@ class Chiken(Animal):
 
 Chiken_1 = Chiken()
 
-class Goose(Animal):
+class Goose(Bird):
 
 
     def __init__(self):
@@ -139,7 +160,7 @@ class Goose(Animal):
 
 Goose_1 = Goose()
 
-class Duck(Animal):
+class Duck(Bird):
     minweight = 1
     maxweight = 10
     product = ['meat', 'eggs']
